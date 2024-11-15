@@ -1,22 +1,22 @@
 @font-face {
-  font-family: "SFUI-Bold";
-  src: url("./Fontfiles/SFUI/SFUIText-Bold.ttf");
-}
+    font-family: "SFUI-Bold";
+    src: url("https://github.com/sammyflek/NewTodoWebApp/blob/main/fonts/SFUIText-Bold.ttf");
+  }
 
-@font-face {
-  font-family: "SFUI-medium";
-  src: url("./Fontfiles/SFUI/SFUIText-Medium.ttf");
-}
+  @font-face {
+    font-family: "SFUI-medium";
+    src: url("https://github.com/sammyflek/NewTodoWebApp/blob/main/fonts/SFUIText-Medium.ttf");
+  }
 
-@font-face {
-  font-family: "SFUI-regular";
-  src: url("./Fontfiles/SFUI/SFUIText-Regular.ttf");
-}
+  @font-face {
+    font-family: "SFUI-regular";
+    src: url("https://github.com/sammyflek/NewTodoWebApp/blob/main/fonts/SFUIText-Regular.ttf");
+  }
 
-@font-face {
-  font-family: "SFUI-Semi-bold";
-  src: url("./Fontfiles/SFUI/SFUIText-Semibold.ttf");
-}
+  @font-face {
+    font-family: "SFUI-Semi-bold";
+    src: url("https://github.com/sammyflek/NewTodoWebApp/blob/main/fonts/SFUIText-Semibold.ttf");
+  }
 
 body {
   margin: 0;
