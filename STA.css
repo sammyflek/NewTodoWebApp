@@ -1,22 +1,23 @@
 @font-face {
-    font-family: "SFUI-Bold";
-    src: url("https://github.com/sammyflek/NewTodoWebApp/blob/main/fonts/SFUIText-Bold.ttf");
-  }
+  font-family: "SFUI-Bold";
+  src: url("https://raw.githubusercontent.com/sammyflek/NewTodoWebApp/main/fonts/SFUIText-Bold.ttf") format('truetype');
+}
 
-  @font-face {
-    font-family: "SFUI-medium";
-    src: url("https://github.com/sammyflek/NewTodoWebApp/blob/main/fonts/SFUIText-Medium.ttf");
-  }
+@font-face {
+  font-family: "SFUI-medium";
+  src: url("https://raw.githubusercontent.com/sammyflek/NewTodoWebApp/main/fonts/SFUIText-Medium.ttf") format('truetype');
+}
 
-  @font-face {
-    font-family: "SFUI-regular";
-    src: url("https://github.com/sammyflek/NewTodoWebApp/blob/main/fonts/SFUIText-Regular.ttf");
-  }
+@font-face {
+  font-family: "SFUI-regular";
+  src: url("https://raw.githubusercontent.com/sammyflek/NewTodoWebApp/main/fonts/SFUIText-Regular.ttf") format('truetype');
+}
 
-  @font-face {
-    font-family: "SFUI-Semi-bold";
-    src: url("https://github.com/sammyflek/NewTodoWebApp/blob/main/fonts/SFUIText-Semibold.ttf");
-  }
+@font-face {
+  font-family: "SFUI-Semi-bold";
+  src: url("https://raw.githubusercontent.com/sammyflek/NewTodoWebApp/main/fonts/SFUIText-Semibold.ttf") format('truetype');
+}
+
 
 body {
   margin: 0;
