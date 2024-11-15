@@ -147,6 +147,7 @@ addTaskButton.addEventListener('click', function() {
     taskInput.focus();
     addTaskButton.classList.remove('active');
     addTaskButton.disabled = true;
+    clearButton.style.display = "none";
 });
 
 });
