@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "SFUI-Bold";
+  src: url("./Fontfiles/SFUI/SFUIText-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SFUI-medium";
+  src: url("./Fontfiles/SFUI/SFUIText-Medium.ttf");
+}
+
+@font-face {
+  font-family: "SFUI-regular";
+  src: url("./Fontfiles/SFUI/SFUIText-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SFUI-Semi-bold";
+  src: url("./Fontfiles/SFUI/SFUIText-Semibold.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(162, 210, 255, 0.15);
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#main-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding-top: 50px;;
+  overflow: hidden; /* Avoid unintentional content overflow */
+  width: 100%;
+  justify-content: center;
+}
+
+#container-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#title{
+  font-family: "SFUI-Bold", sans-serif;
+  color: #0F0E26;
+  font-size: 48px;
+  width: 60%;
+  text-align: center;
+  font-size: 5vw; /* Scales based on screen width */
+}
+
+@media (min-width: 768px) {
+  #title {
+      font-size: 48px; /* Fixed size for larger devices */
+  }
+}
+
+@media (max-width: 480px) {
+  #title {
+      font-size: 24px; /* Smaller size for small devices */
+  }
+}
+
+@media (max-width: 768px) {
+  #input-container, #task-container.active {
+      width: 95%;
+  }
+
+  #title {
+      font-size: 24px; /* Smaller font size for small devices */
+  }
+}
+
+#blue-title {
+  color: #359BFA;
+}
+
+#task-area {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+}
+
+#input-container {
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  gap: 10px;
+}
+
+#text-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+#task-input {
+  width: 100%;
+  border:none;
+  font-family: "SFUI-Medium", sans-serif;
+  font-size: 16px;
+  color: #0e0e0e;
+  width: 100%;
+  white-space: wrap;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#task-input:focus {
+  outline: none;
+  border: none; 
+}
+
+#task-description {
+  width: 100%; 
+  max-width: 100%; 
+  resize: none; 
+  box-sizing: border-box; 
+  font-family: "SFUI-regular", sans-serif;
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  border: none;
+  outline: none;
+  overflow: auto;
+  height: 30px;
+}
+
+
+#dividing-line {
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+#button-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.clear-button {
+  background-color: #EFEFEF;
+  border: none;
+  width: 76px;
+  padding: 8px 16px;  font-size: 10px;
+  font-family: "SFUI-Semi-bold", sans-serif;
+  border-radius: 4px;
+}
+
+#add-task-button {
+  padding: 8px 16px;
+  font-size: 10px;
+  font-family: "SFUI-Semi-bold", sans-serif;
+  background-color: #359BFA;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  opacity: 30%;
+  width: 76px;
+}
+
+#add-task-button.active{
+  opacity: 1;
+  cursor: pointer;
+}
+
+#todo-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-top: 24px;
+  width: 100%;
+}
+
+#todo-area-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#todo-header {
+  font-size: 20px;
+  font-family: "SFUI-Bold", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+#todo-subheader {
+  font-size: 16px;
+  font-family: "SFUI-regular", sans-serif;
+  color: rgba(165, 166, 167, 100);
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.check-circle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000;  
+  border-radius: 50%;          
+  cursor: pointer;           
+  transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+.check-circle:hover {
+  background-color: #c1c1c1;  
+  border-color: #c1c1c1;      
+}
+
+.task-name {
+  list-style-type: none;
+  font-family: "SFUI-regular", sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.task-check-name-description {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+
+#task-container.active {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #fff;
+  border: 0.7px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 0.7px solid rgba(0, 0, 0, 0.2);
+  align-items: center;
+  margin-top: 8px;
+}
+
+.delete-task {
+  padding: 8px 16px;
+  font-size: 10px;
+  font-family: "SFUI-Semi-bold", sans-serif;
+  background-color: #FA3535;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.task-input-description {
+  font-family: "SFUI-regular", sans-serif;
+  font-weight: lighter;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  opacity: 50%;
+}
+
+.task-name-and-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  column-gap: 0;
+}
+
+.task-check-name-description {
+  display: flex;
+  align-items: flex-start;
+
+}
+
+.clear-button {
+  background-color: #EFEFEF;
+  border: none;
+  width: 76px;
+  padding: 8px 16px;  font-size: 10px;
+  font-family: "SFUI-Semi-bold", sans-serif;
+  border-radius: 4px;
+}
+
+
+#task-container.active {
+  width: 80%;
+  max-width: 600px; 
+  overflow: hidden; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #fff;
+  gap: 10px;
+}
